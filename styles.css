@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background: url(bg.jpg);
+  background-size: cover;
+  color: #2f2f2f;
+  font-size: 14px;
+}
+
+.wrapper{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing_table{
+  display: flex;
+}
+
+.pricing_table .pt_item{
+  width: 200px;
+  background: #fff;
+  border-right: 2px solid #f4f4f9;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.pricing_table .pt_item:first-child{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pricing_table .pt_item:last-child{
+  border-right: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pricing_table .pt_item .title p{
+  font-size: 16px; 
+  font-weight: 700;
+}
+
+.pricing_table .pt_item .price{
+  margin: 15px 0;
+}
+
+.pricing_table .pt_item .price p{
+  color: #00066a;
+  position: relative;
+}
+
+.pricing_table .pt_item .price p .money{
+  font-size: 26px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.pricing_table .pt_item .price p .dollar{
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  font-weight: 700;
+}
+
+.pricing_table .pt_item  ul li{
+  padding: 10px 0;
+  border-bottom: 2px solid #f4f4f9;
+}
+
+.pricing_table .pt_item  ul li:last-child{
+  border: 0px;
+}
+
+.pricing_table .pt_item  ul li p span{
+  font-weight: 700;
+}
+
+.pricing_table .pt_item button{
+  margin-top: 15px;
+  border: 0px;
+  background: #4fc6f0;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.pricing_table .pt_item button:hover{
+  background: #79d4f4;
+}
+
+.pricing_table .pt_item.active button{
+  background: #2fcf68;
+}
+
+.pricing_table .pt_item.active button:hover{
+  background: #1d8d42;
+}
+
+.pricing_table .pt_item.active .icon{
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  border: 35px solid;
+  border-color: transparent transparent transparent #1d8d42;
+  transform: rotate(-45deg)
+}
+
+.pricing_table .pt_item.active .icon .i{
+  color: #fff;
+  position: absolute;
+  bottom: -5px;
+  right: 15px;
+}
+
+.pricing_table .pt_item.active .price p{
+  color: #2fcf68;
+}
+
+.pricing_table .pt_item.active{
+  transform: scale(1.05);
+  z-index: 1;
+  border-right: 0;
+  box-shadow: 2px 0 5px 2px rgba(0,0,0,0.05), -2px 0 5px 2px rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
